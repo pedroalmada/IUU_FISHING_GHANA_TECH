@@ -1,0 +1,306 @@
+/* General Styles */
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 20px;
+    background-color: #333;
+    text-align: center;
+}
+
+.large-heading {
+    font-size: 5em;
+}
+
+footer.uk-section-primary {
+    background-color: #000 !important; 
+    color: #fff !important; 
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2; 
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.uk-cover-container {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.uk-overlay-primary {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.uk-heading-xlarge {
+    font-size: 5.5em;
+}
+
+.uk-text-large {
+    font-size: 1.5em;
+}
+
+/* Full-screen sections */
+.full-screen-section {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Parallax sections */
+.parallax-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.parallax-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Styles for solid gray sections */
+.section-overlay {
+    background-color: #323232; 
+    color: #fff;
+    padding: 10px 0; 
+    z-index: 1;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.section-overlay .content {
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+    padding: 20px;
+}
+
+#Ghanian .content {
+    padding: 10px 10px; 
+}
+
+/* Mapbox Scrollytelling Styles */
+.mapbox-section {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.mapbox-section a,
+.mapbox-section a:hover,
+.mapbox-section a:visited {
+    color: #0071bc;
+}
+
+.mapbox-section #map {
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+}
+
+.mapbox-section #mapInset {
+    bottom: 50px;
+    right: 30px;
+    height: 180px;
+    width: 250px;
+    max-width: 100%;
+    position: fixed;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+}
+
+.mapbox-section #mapInset .mapboxgl-ctrl-bottom-left {
+    display: none;
+}
+
+@media (max-width: 500px) {
+    .mapbox-section #mapInset {
+        display: none;
+    }
+}
+
+.mapbox-section #header {
+    margin: auto;
+    width: 100%;
+    position: relative;
+    z-index: 5;
+}
+
+.mapbox-section #header h1,
+.mapbox-section #header h2,
+.mapbox-section #header p {
+    margin: 0;
+    padding: 2vh 2vw;
+    text-align: center;
+}
+
+.mapbox-section #footer {
+    width: 100%;
+    min-height: 5vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    text-align: center;
+    line-height: 25px;
+    font-size: 13px;
+    position: relative;
+    z-index: 5;
+}
+
+.mapbox-section #features {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+.mapbox-section .hidden {
+    visibility: hidden;
+}
+
+.mapbox-section .centered {
+    width: 50vw;
+    margin: 0 auto;
+}
+
+.mapbox-section .lefty {
+    width: 33vw;
+    margin-left: 5vw;
+}
+
+.mapbox-section .righty {
+    width: 33vw;
+    margin-left: 62vw;
+}
+
+.mapbox-section .fully {
+    width: 100%;
+    margin: auto;
+}
+
+.mapbox-section .light {
+    color: #444;
+    background-color: #fafafa;
+}
+
+.mapbox-section .dark {
+    color: #fafafa;
+    background-color: #444;
+}
+
+.mapbox-section .step {
+    padding-bottom: 50vh;
+    opacity: 0.25;
+}
+
+.mapbox-section .step.active {
+    opacity: 0.9;
+}
+
+.mapbox-section .step div {
+    padding: 25px 50px;
+    line-height: 25px;
+    font-size: 13px;
+}
+
+.mapbox-section .step img {
+    width: 100%;
+}
+
+@media (max-width: 750px) {
+    .mapbox-section .centered,
+    .mapbox-section .lefty,
+    .mapbox-section .righty,
+    .mapbox-section .fully {
+        width: 90vw;
+        margin: 0 auto;
+    }
+}
+
+.mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan,
+.mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan .mapboxgl-canvas {
+    touch-action: unset;
+}
+
+#saiko-video {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+}
+
+figure {
+    text-align: center;
+    margin: 20px 0;
+}
+
+figcaption {
+    font-size: 0.9em;
+    color: #ccc;
+    margin-top: 5px;
+}
+
+.section-overlay .content {
+    padding-top: 20px; /* Adjust top padding */
+    padding-bottom: 20px; /* Adjust bottom padding */
+    margin-top: -20px; /* Adjust to reduce gap */
+    margin-bottom: -20px; /* Adjust to reduce gap */
+}
+
